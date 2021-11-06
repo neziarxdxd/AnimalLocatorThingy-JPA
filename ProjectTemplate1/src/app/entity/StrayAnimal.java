@@ -64,10 +64,14 @@ public class StrayAnimal {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
+	@Override
 	public String toString() {
-		return id+""+color+""+description+""+neutered+""+type;
+		return "StrayAnimal [id=" + id + ", type=" + type + ", color=" + color + ", neutered=" + neutered
+				+ ", description=" + description + "]";
 	}
+	
+	
 	
 	
 	

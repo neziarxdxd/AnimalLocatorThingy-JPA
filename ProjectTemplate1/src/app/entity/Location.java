@@ -12,16 +12,61 @@ public class Location {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)  // autoincrement
 	@Column
-	Long id;
+	private Long id;
 	
 	@Column
 	private String location_name;
 	
 	@Column
-	Double Latitude;
+	private Double latitude;
 	
 	@Column
-	Double Longitude;
+	private Double longitude;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getLocation_name() {
+		return location_name;
+	}
+
+	public void setLocation_name(String location_name) {
+		this.location_name = location_name;
+	}
+
+	public Double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(Double latitude) {
+		this.latitude = latitude;
+	}
+
+	public Double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(Double longitude) {
+		this.longitude = longitude;
+	}
+
+	@Override
+	public String toString() {
+		return "Location [id=" + id + ", location_name=" + location_name + ", latitude=" + latitude + ", longitude="
+				+ longitude + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
 
 	
 }
