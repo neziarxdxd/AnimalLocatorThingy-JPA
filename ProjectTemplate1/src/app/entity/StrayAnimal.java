@@ -5,12 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class StrayAnimal {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)  // autoincrement
 	@Column
+	@NotNull(message="Name must be valid")
 	private Long id;
 	
 	@Column
@@ -70,10 +72,5 @@ public class StrayAnimal {
 		return "StrayAnimal [id=" + id + ", type=" + type + ", color=" + color + ", neutered=" + neutered
 				+ ", description=" + description + "]";
 	}
-	
-	
-	
-	
-	
 
 }
