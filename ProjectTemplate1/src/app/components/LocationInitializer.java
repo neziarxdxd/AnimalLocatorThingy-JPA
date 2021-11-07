@@ -26,14 +26,10 @@ public class LocationInitializer {
 		}
 	}
 	
-	public Location newLocation(String location_name,Double latitude, Double longitude) {
-		Location locationPlace = insertLocation(location_name, latitude, longitude);
-		locationRepository.save(locationPlace);
-		return locationPlace;
-	}
+
 	
 	
-	private Location insertLocation(String location_name,Double latitude, Double longitude){		
+	public Location insertLocation(String location_name,Double latitude, Double longitude){		
 		Location location = new Location();	
 		location.setLocation_name(location_name);
 		location.setLatitude(latitude);
